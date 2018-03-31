@@ -15,7 +15,7 @@ export default TabNavigator(
     Bookmark: { screen: BookmarkScreen },
     History: { screen: HistoryScreen },
     Messages: { screen: MessagesScreen },
-    Profile: { screen: ProfileScreen }
+    Profile: { screen: ProfileScreen },
   },
   {
     navigationOptions: ({ navigation }) => ({
@@ -39,8 +39,8 @@ export default TabNavigator(
     }),
     tabBarComponent: NavigationComponent,
     tabBarPosition: "bottom",
-    animationEnabled: true, //swipe left-and-right animation for tabs
-    swipeEnabled: true,
+    animationEnabled: false, //swipe left-and-right animation for tabs
+    swipeEnabled: false,
     tabBarOptions: {
       activeTintColor: "#2D9CDB",
       bottomNavigationOptions: {
