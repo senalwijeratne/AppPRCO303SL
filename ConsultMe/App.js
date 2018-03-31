@@ -39,8 +39,8 @@ export default TabNavigator(
     }),
     tabBarComponent: NavigationComponent,
     tabBarPosition: "bottom",
-    animationEnabled: false, //swipe left-and-right animation for tabs
-    swipeEnabled: false,
+    animationEnabled: true, //swipe left-and-right animation for tabs
+    swipeEnabled: true,
     tabBarOptions: {
       activeTintColor: "#2D9CDB",
       bottomNavigationOptions: {
