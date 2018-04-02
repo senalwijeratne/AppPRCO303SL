@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { TabNavigator } from 'react-navigation'
+import { TabNavigator, StackNavigator } from 'react-navigation'
 import { NavigationComponent } from 'react-native-material-bottom-navigation'
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 
@@ -9,12 +9,23 @@ import HistoryScreen from './components/history/History.js'
 import MessagesScreen from './components/messages/Messages.js'
 import ProfileScreen from './components/profile/Profile.js'
 
+
+const MessagesStack = StackNavigator({
+  Home: { screen: MessagesScreen },
+  Test: {
+    screen: ProfileScreen,
+    navigationOptions: {
+      tabBarVisible: false,
+    }
+  },
+})
+
 export default TabNavigator(
   {
     Home: { screen: HomeScreen },
     Bookmark: { screen: BookmarkScreen },
     History: { screen: HistoryScreen },
-    Messages: { screen: MessagesScreen },
+    Messages: { screen: MessagesStack },
     Profile: { screen: ProfileScreen },
   },
   {

@@ -16,7 +16,7 @@ export default class Card extends Component {
   }
   render() {
     return (
-      <TouchableOpacity style={styles.cardContainer} onPress={() => Alert.alert('Card was pressed')} activeOpacity={0.9}>
+      <TouchableOpacity style={styles.cardContainer} onPress={() => this.props.navigation.navigate('Test') activeOpacity={0.9}>
         <View style={styles.userInformations}>
           <Image style={{width: 60, height: 60, borderRadius: 30}} source={{uri: 'https://s3.amazonaws.com/uifaces/faces/twitter/brynn/128.jpg'}} />
         </View>

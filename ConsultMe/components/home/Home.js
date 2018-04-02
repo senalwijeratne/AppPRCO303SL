@@ -7,7 +7,7 @@ export default class HomeScreen extends Component {
   render() {
     return (
       <ScrollView contentContainerStyle={styles.contentContainer}>
-        <Text>Home!</Text>
+        <Text style={{ fontSize: 30 }}>Home</Text>
         <Card />
         <Card />
         <Card />
